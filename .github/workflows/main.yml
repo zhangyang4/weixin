@@ -20,4 +20,4 @@ jobs:
         run: mvn clean package -DskipTests
 
       - name: Start Spring Boot app
-        run: java -jar target/your-spring-boot-app.jar --spring.profiles.active=github-actions
+        run: java -jar target/weixin-1.0-SNAPSHOT.jar
