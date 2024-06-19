@@ -106,20 +106,6 @@ public class WxDemo {
         return result3;
     }
 
-    /**
-     * 每日情话
-     * @return
-     */
-    public static String getLoveStr(){
-        String url = "https://apis.tianapi.com/saylove/index";
-        Map<String, Object> map = new HashMap<>();
-        map.put("key", "90e607d5420b8832003c22ee15424609");
-        String result = HttpUtil.get(url, map);
-        JSONObject jsonObject = JSON.parseObject(result);
-        JSONObject result2 = (JSONObject) jsonObject.get("result");
-        return result2.get("content").toString();
-    }
-
 
 
     /**
@@ -166,10 +152,6 @@ public class WxDemo {
         lowest.put("color", "#FAEBD7");
         data.put("lowest", lowest);
 
-        Map<String, Object> loveStr = new HashMap<>();
-        loveStr.put("value", getLoveStr());
-        loveStr.put("color", "#FAEBD7");
-        data.put("loveStr", loveStr);
 
         Map<String, Object> school = new HashMap<>();
         school.put("value", list.get(6).get("value"));
