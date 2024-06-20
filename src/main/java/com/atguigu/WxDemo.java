@@ -17,8 +17,11 @@ import java.util.*;
  */
 public class WxDemo {
     public static void main(String[] args) {
-        sendMsg();
+        get_access_token();
     }
+
+
+
 
     /**
      * 获取accessToken
@@ -170,6 +173,7 @@ public class WxDemo {
 
         map.put("data", data);
         String post = HttpUtil.post(url, JSON.toJSONString(map));
+        System.out.println("推送成功");
     }
 
 
